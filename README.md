@@ -9,13 +9,11 @@ A threat actor may use a native template syntax on the vulnerable target to exec
 ## Code
 #### Target-Logic 
 ```py
-...
 @app.route('/welcome', methods=['GET'])
 def welcome():
   user = request.args.get('user')
   template = f"<h1>Welcome, {user}!</h1>"
   return render_template_string(template)
-...
 ```
 
 #### Target-In
